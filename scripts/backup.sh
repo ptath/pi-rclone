@@ -16,5 +16,5 @@ list=$(cat /home/pi/.rclone/backup.list)
 for i in $list
 do
         echo " Trying "$i"..."
-        rclone sync -P --filter-from /home/pi/.rclone/excludes "$i" "$RCLONE_SNAME":"$RCLONE_SPATH""$i"
+        rclone sync -P --filter-from /home/pi/.rclone/excludes.list "$i" "$RCLONE_SNAME":"$RCLONE_SPATH""$i"
 done
